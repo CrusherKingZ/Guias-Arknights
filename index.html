@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia de evento</title>
+
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/assets/vendor/normalize-css/normalize.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/misc/normalize-fixes.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/node/node.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/ajax-progress.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/align.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/autocomplete-loading.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/fieldgroup.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/container-inline.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/clearfix.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/details.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/hidden.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/item-list.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/js.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/nowrap.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/position-container.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/progress.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/reset-appearance.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/resize.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/sticky-header.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/system-status-counter.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/system-status-report-counters.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/system-status-report-general-info.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/tabledrag.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/tablesort.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/system/components/tree-child.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/modules/contrib/poll/css/poll.base.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/modules/contrib/poll/css/poll.theme.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/stable/css/views/views.module.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/assets/vendor/jquery.ui/themes/base/core.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/assets/vendor/jquery.ui/themes/base/menu.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/assets/vendor/jquery.ui/themes/base/autocomplete.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/modules/contrib/paragraphs/css/paragraphs.unpublished.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="/arknights/core/assets/vendor/jquery.ui/themes/base/theme.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/modules/contrib/search_api_autocomplete/css/search_api_autocomplete.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/themes/main/css/slick.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/themes/main/css/slick-theme.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/themes/main/css/awesomplete.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/themes/main/css/main.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/sites/arknights/themes/gamepressbase/css/gamepressbase.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/action-links.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/breadcrumb.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/button.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/collapse-processed.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/container-inline.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/details.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/exposed-filters.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/field.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/form.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/icons.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/inline-form.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/item-list.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/link.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/links.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/menu.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/more-link.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/pager.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/tabledrag.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/tableselect.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/tablesort.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/tabs.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/textarea.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/ui-dialog.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/messages.css?revhex"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://gamepress.gg/arknights/core/themes/classy/css/components/progress.css?revhex"
+    />
+    <!--[if lte IE 8]>
+      <script src="/arknights/sites/arknights/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+    <![endif]-->
+    <script
+      src="https://gamepress.gg/arknights/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"
+      type="b8324dbb5da090d1bf9fe674-text/javascript"
+    ></script>
+    <script
+      src="https://gamepress.gg/arknights/sites/arknights/files/js/js_IfqzHiUTwZH2H0gSZOmiplXoH34uGUxDaNEYeime-xM.js"
+      type="b8324dbb5da090d1bf9fe674-text/javascript"
+    ></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div style=" margin:2%">
+
+        <header id="page-title" style="background-color: #000000CC;">
+            <h1 align="center" style="color: aliceblue;" >Guia de farmeo para Who Is Real Rerun</h1>
+        </header>
+
+        <div class="og-image">
+            <img src="WhoIsRealRerun.png" width="1560" height="500" alt="" typeof="foaf:Image" class="image-style-banner-image"/>
+        </div>
+
+        <div class="field__item">
+        <span id="topic-3377206">
+            <div id="Event Summaries"></div>
+            <h2 class="main-title">Resumen Del Evento</h2>
+            <div class="topic-text">
+            <div class="event-total-summary">
+                <table>
+                <tr>
+                    <td class="event-totals-text">
+                    Recompensas de primera limpieza<br>(Solo para jugadores nuevos)
+                    </td>
+                    <td class="event-totals-cell">
+                    <div class="event-totals-items">
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg//arknights/sites/arknights/files/2019-11/item-5.png);
+                        "
+                        >
+                        <a
+                            href="https://gamepress.gg//arknights/item/originite-prime"
+                        >
+                            <img
+                            src="https://gamepress.gg//arknights/sites/arknights/files/styles/50x50/public/game-images/items/DIAMOND.png?itok=EQ-zTGMm"
+                            />
+                        </a>
+                        <div class="item-qty">30</div>
+                        </div>
+                        <div class="item-cell">
+                        <a
+                            href="https://gamepress.gg//arknights/furniture/inefficacious-brush-container"
+                        >
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Useless.png?itok=Y2rAFcV2"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/evanescent-plant-vase">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Littertank.png?itok=rc8_L5oG"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/fundamental-incandescence">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Floorlamp.png?itok=xfo1fVC8"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/unclouded-landscapes">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/SuShanshui.png?itok=ysb5j6HB"
+                            />
+                        </a>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/dusk-inkstick">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/DusksInk.png?itok=yl5XWzIg"
+                            />
+                        </a>
+                        <div class="item-qty">1130</div>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="event-total-summary">
+                <table>
+                <tr>
+                    <td class="event-totals-text">Totales Por Misiones</td>
+                    <td class="event-totals-cell">
+                    <div class="event-totals-items">
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/dusk-inkstick">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/DusksInk.png?itok=yl5XWzIg"
+                            />
+                        </a>
+                        <div class="item-qty">1460</div>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/operator/lava-purgatory">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/char_1011_lava2_0.png?itok=hSzEXTZS"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/incisive-drapery-narrow">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Transparentcurtainnarrow.png?itok=X7e8w-Qv"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/incisive-drapery-wide">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Transparentcurtainwide.png?itok=npGMLatd"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/picturesque-landscapes">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/PicturesqueMountains.png?itok=Pf28-fis"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/water-vitrified-tiles">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Glazedbrick.png?itok=iRtklA3i"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/stillwater-lotus">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Stillwaterfloatinglotusbox.png?itok=CvE9pzNu"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/jaded-daybed">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Whitejadeyellowbeamcouch.png?itok=Kgk49QjL"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/plaque-alpha-and-omega">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/WhoIsRealPlaque.png?itok=F6FQ6wby"
+                            />
+                        </a>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/intelligence-certificate">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-08/REP_COIN.png?itok=SzsydwXp"
+                            />
+                        </a>
+                        <div class="item-qty">1275</div>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="event-total-summary">
+                <table>
+                <tr>
+                    <td class="event-totals-text">Materiales Farmeables</td>
+                    <td class="event-totals-cell">
+                    <div class="event-totals-items">
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/incandescent-alloy">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-02/MTL_SL_IAM3.png?itok=cv6EwD0U"
+                            />
+                        </a>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/polyester-pack">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_RUSH3.png?itok=GJrPJCZ-"
+                            />
+                        </a>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/orirock-cluster">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_G3.png?itok=E3frCAnD"
+                            />
+                        </a>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="event-total-summary">
+                <table>
+                <tr>
+                    <td class="event-totals-text">
+                    Contenido De La Tienda
+                    </td>
+                    <td class="event-totals-cell">
+                    <div class="event-totals-items">
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/lava-purgatorys-token">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/PurgatoryToken.png?itok=egtuA-nk"
+                            />
+                        </a>
+                        <div class="item-qty">5</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/headhunting-permit">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/TKT_GACHA.png?itok=qAgfioD_"
+                            />
+                        </a>
+                        <div class="item-qty">3</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/d32-steel">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_DS.png?itok=Sas_C43Z"
+                            />
+                        </a>
+                        <div class="item-qty">1</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/polymerized-gel">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-02/MTL_SL_PGEL4.png?itok=U7qwckyL"
+                            />
+                        </a>
+                        <div class="item-qty">3</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/crystalline-circuit">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-11/MTL_SL_OC4.png?itok=67SmuT92"
+                            />
+                        </a>
+                        <div class="item-qty">3</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/white-horse-kohl">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_ALCOHOL2.png?itok=PGaIA1Ls"
+                            />
+                        </a>
+                        <div class="item-qty">3</div>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/whimsical-projections">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Capricescene.png?itok=xraAr2k3"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/stepping-water">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/TreadWater.png?itok=pS-kd5pd"
+                            />
+                        </a>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/conventional-incandescence">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Generallighting.png?itok=xRi3Ubua"
+                            />
+                        </a>
+                        <div class="item-qty">2</div>
+                        </div>
+                        <div class="item-cell">
+                        <a href="https://gamepress.gg/arknights/furniture/suspended-incandescence">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Highhanginglight.png?itok=kmvQosCh"
+                            />
+                        </a>
+                        <div class="item-qty">2</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/intelligence-certificate">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-08/REP_COIN.png?itok=SzsydwXp"
+                            />
+                        </a>
+                        <div class="item-qty">600</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/aketon">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_KETONE3.png?itok=txZKCYAE"
+                            />
+                        </a>
+                        <div class="item-qty">5</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/manganese-ore">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_MANGANESE1.png?itok=HwrFWLi6"
+                            />
+                        </a>
+                        <div class="item-qty">5</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/lmd">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/GOLD.png?itok=Kim0GqpM"
+                            />
+                        </a>
+                        <div class="item-qty">100000</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/strategic-battle-record">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/sprite_exp_card_t4.png?itok=EjrDb01h"
+                            />
+                        </a>
+                        <div class="item-qty">10</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/tactical-battle-record">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/sprite_exp_card_t3.png?itok=y1zfwNA0"
+                            />
+                        </a>
+                        <div class="item-qty">20</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/frontline-battle-record">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/sprite_exp_card_t2.png?itok=QKr27sSq"
+                            />
+                        </a>
+                        <div class="item-qty">40</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/skill-summary-3">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SKILL3.png?itok=Tvdbj_m-"
+                            />
+                        </a>
+                        <div class="item-qty">10</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/skill-summary-2">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SKILL2.png?itok=fR95KnvX"
+                            />
+                        </a>
+                        <div class="item-qty">20</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-2_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/sugar">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_STRG2.png?itok=E6yHDbca"
+                            />
+                        </a>
+                        <div class="item-qty">8</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-2_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/orirock-cube">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_G2.png?itok=pljj90if"
+                            />
+                        </a>
+                        <div class="item-qty">8</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-2_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/polyketon">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_KETONE2.png?itok=Ec4662AZ"
+                            />
+                        </a>
+                        <div class="item-qty">8</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/caster-chip">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_ASC_CST1.png?itok=k0WV2geT"
+                            />
+                        </a>
+                        <div class="item-qty">4</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/lmd">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/GOLD.png?itok=Kim0GqpM"
+                            />
+                        </a>
+                        <div class="item-qty">∞</div>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div class="event-total-summary">
+                <table>
+                <tr>
+                    <td class="event-totals-text">
+                    Adiciones En Tienda De Certificados
+                    </td>
+                    <td class="event-totals-cell">
+                    <div class="event-totals-items">
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/orundum">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/DIAMOND_SHD.png?itok=XkU0HUAI"
+                            />
+                        </a>
+                        <div class="item-qty">2000</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/lmd">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/GOLD.png?itok=Kim0GqpM"
+                            />
+                        </a>
+                        <div class="item-qty">30000</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/strategic-battle-record">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/sprite_exp_card_t4.png?itok=EjrDb01h"
+                            />
+                        </a>
+                        <div class="item-qty">20</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/skill-summary-3">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SKILL3.png?itok=Tvdbj_m-"
+                            />
+                        </a>
+                        <div class="item-qty">20</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/orirock-concentration">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_G4.png?itok=oXA9It9-"
+                            />
+                        </a>
+                        <div class="item-qty">4</div>
+                        </div>
+                        <div
+                        class="item-cell"
+                        style="
+                            background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                        "
+                        >
+                        <a href="https://gamepress.gg/arknights/item/keton-colloid">
+                            <img
+                            src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_KETONE4.png?itok=qUMwfqcw"
+                            />
+                        </a>
+                        <div class="item-qty">4</div>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            </div></span>
+        </div>
+
+        <div class="field__item"><span id="topic-2693921">
+            <div id="Who Is Real Rerun - Event Store"></div> <h2 class="main-title">Coste Total De La Tienda</h2>
+        
+        <div class="event-total-summary">
+            <table>
+            <tr>
+                <th style="width: 20%; text-align: center">Icono</th>
+                <th>Elementos</th>
+                <th>Cantidad</th>
+                <th>Costo</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/PurgatoryToken.png?itok=egtuA-nk"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >Lava the Purgatory&#039;s Token
+                </a>
+                </td>
+                <td>1</td>
+                <td style="text-align: right">
+                200
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                200
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/PurgatoryToken.png?itok=egtuA-nk"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >Lava the Purgatory&#039;s Token
+                </a>
+                </td>
+                <td>1</td>
+                <td style="text-align: right">
+                240
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                240
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/PurgatoryToken.png?itok=egtuA-nk"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >Lava the Purgatory&#039;s Token
+                </a>
+                </td>
+                <td>1</td>
+                <td style="text-align: right">
+                280
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                280
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/PurgatoryToken.png?itok=egtuA-nk"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >Lava the Purgatory&#039;s Token
+                </a>
+                </td>
+                <td>1</td>
+                <td style="text-align: right">
+                320
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                320
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/PurgatoryToken.png?itok=egtuA-nk"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/lava-purgatorys-token"
+                    >Lava the Purgatory&#039;s Token
+                </a>
+                </td>
+                <td>1</td>
+                <td style="text-align: right">
+                360
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                360
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/headhunting-permit">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/TKT_GACHA.png?itok=qAgfioD_"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/headhunting-permit"
+                    >Headhunting Permit
+                </a>
+                </td>
+                <td>3</td>
+                <td style="text-align: right">
+                150
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                450
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/d32-steel">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_DS.png?itok=Sas_C43Z"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/d32-steel"
+                    >D32 Steel
+                </a>
+                </td>
+                <td>1</td>
+                <td style="text-align: right">
+                100
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                100
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/polymerized-gel">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-02/MTL_SL_PGEL4.png?itok=U7qwckyL"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/polymerized-gel"
+                    >Polymerized Gel
+                </a>
+                </td>
+                <td>3</td>
+                <td style="text-align: right">
+                40
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                120
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/crystalline-circuit">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-11/MTL_SL_OC4.png?itok=67SmuT92"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/crystalline-circuit"
+                    >Crystalline Circuit
+                </a>
+                </td>
+                <td>3</td>
+                <td style="text-align: right">
+                40
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                120
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/white-horse-kohl">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_ALCOHOL2.png?itok=PGaIA1Ls"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/white-horse-kohl"
+                    >White Horse Kohl
+                </a>
+                </td>
+                <td>3</td>
+                <td style="text-align: right">
+                40
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                120
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="background-image: url(https://gamepress.gg/arknights/)"
+                >
+                    <a
+                    href="https://gamepress.gghttps://gamepress.gg/arknights/furniture/whimsical-projections"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Capricescene.png?itok=xraAr2k3"
+                    />
+                    </a>
+                </div>
+                <span> o </span>
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/intelligence-certificate"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-08/REP_COIN.png?itok=SzsydwXp"
+                    />
+                    </a>
+                    <div class="item-qty">145</div>
+                </div>
+                </td>
+                <td>
+                <a
+                    href="https://gamepress.gg/arknights/furniture/whimsical-projections"
+                    >Whimsical Projections
+                </a>
+                <div>
+                    <span>o</span>
+                    <a
+                    href="https://gamepress.gghttps://gamepress.gg/arknights/node/19296"
+                    >
+                    Intelligence Certificate x145
+                    </a>
+                    <span>(Si ya lo tienes)</span>
+                </div>
+                </td>
+                <td>1</td>
+                <td style="text-align: right">
+                25
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                25
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="background-image: url(https://gamepress.gg/arknights/)"
+                >
+                    <a href="https://gamepress.gg/arknights/furniture/stepping-water">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/TreadWater.png?itok=pS-kd5pd"
+                    />
+                    </a>
+                </div>
+                <span> o </span>
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/intelligence-certificate"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-08/REP_COIN.png?itok=SzsydwXp"
+                    />
+                    </a>
+                    <div class="item-qty">125</div>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/furniture/stepping-water"
+                    >&#039;Stepping Water&#039;
+                </a>
+                <div>
+                    <span>o</span>
+                    <a href="https://gamepress.gg/arknights/node/19296">
+                    Intelligence Certificate x125
+                    </a>
+                    <span>(Si ya lo tienes)</span>
+                </div>
+                </td>
+                <td>1</td>
+                <td style="text-align: right">
+                25
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                25
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div class="item-cell" style="background-image: url(/arknights/)">
+                    <a
+                    href="https://gamepress.gg/arknights/furniture/conventional-incandescence"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Generallighting.png?itok=xRi3Ubua"
+                    />
+                    </a>
+                </div>
+                <span> o </span>
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/intelligence-certificate"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-08/REP_COIN.png?itok=SzsydwXp"
+                    />
+                    </a>
+                    <div class="item-qty">260</div>
+                </div>
+                </td>
+                <td>
+                <a
+                    href="https://gamepress.gg/arknights/furniture/conventional-incandescence"
+                    >Conventional Incandescence
+                </a>
+                <div>
+                    <span>o</span>
+                    <a href="https://gamepress.gg/arknights/node/19296">
+                    Intelligence Certificate x260
+                    </a>
+                    <span>(Si ya lo tienes)</span>
+                </div>
+                </td>
+                <td>2</td>
+                <td style="text-align: right">
+                35
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                70
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="background-image: url(https://gamepress.gg/arknights/)"
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/furniture/suspended-incandescence"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2021-02/Highhanginglight.png?itok=kmvQosCh"
+                    />
+                    </a>
+                </div>
+                <span> o </span>
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/intelligence-certificate"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/2020-08/REP_COIN.png?itok=SzsydwXp"
+                    />
+                    </a>
+                    <div class="item-qty">70</div>
+                </div>
+                </td>
+                <td>
+                <a
+                    href="https://gamepress.gg/arknights/furniture/suspended-incandescence"
+                    >Suspended Incandescence
+                </a>
+                <div>
+                    <span>o</span>
+                    <a href="https://gamepress.gg/arknights/node/19296">
+                    Intelligence Certificate x70
+                    </a>
+                    <span>(Si ya lo tienes)</span>
+                </div>
+                </td>
+                <td>2</td>
+                <td style="text-align: right">
+                35
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                70
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/aketon">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_KETONE3.png?itok=txZKCYAE"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/aketon">Aketon </a>
+                </td>
+                <td>5</td>
+                <td style="text-align: right">
+                8
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                40
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/manganese-ore">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_MANGANESE1.png?itok=HwrFWLi6"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/manganese-ore"
+                    >Manganese Ore
+                </a>
+                </td>
+                <td>5</td>
+                <td style="text-align: right">
+                15
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                75
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/lmd">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/GOLD.png?itok=Kim0GqpM"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/lmd">LMD x5000</a>
+                </td>
+                <td>20</td>
+                <td style="text-align: right">
+                7
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                140
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-5_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/strategic-battle-record"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/sprite_exp_card_t4.png?itok=EjrDb01h"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a
+                    href="https://gamepress.gg/arknights/item/strategic-battle-record"
+                    >Strategic Battle Record x2</a
+                >
+                </td>
+                <td>5</td>
+                <td style="text-align: right">
+                5
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                25
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/tactical-battle-record"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/sprite_exp_card_t3.png?itok=y1zfwNA0"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/tactical-battle-record"
+                    >Tactical Battle Record x2</a
+                >
+                </td>
+                <td>10</td>
+                <td style="text-align: right">
+                3
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                30
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                    "
+                >
+                    <a
+                    href="https://gamepress.gg/arknights/item/frontline-battle-record"
+                    >
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/sprite_exp_card_t2.png?itok=QKr27sSq"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a
+                    href="https://gamepress.gg/arknights/item/frontline-battle-record"
+                    >Frontline Battle Record x2</a
+                >
+                </td>
+                <td>20</td>
+                <td style="text-align: right">
+                1
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                20
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/skill-summary-3">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SKILL3.png?itok=Tvdbj_m-"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/skill-summary-3"
+                    >Skill Summary - 3
+                </a>
+                </td>
+                <td>10</td>
+                <td style="text-align: right">
+                4
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                40
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/skill-summary-2">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SKILL2.png?itok=fR95KnvX"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/skill-summary-2"
+                    >Skill Summary - 2
+                </a>
+                </td>
+                <td>20</td>
+                <td style="text-align: right">
+                2
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                40
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-2_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/sugar">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_STRG2.png?itok=E6yHDbca"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/sugar">Sugar </a>
+                </td>
+                <td>8</td>
+                <td style="text-align: right">
+                2
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                16
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-2_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/orirock-cube">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_G2.png?itok=pljj90if"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/orirock-cube"
+                    >Orirock Cube
+                </a>
+                </td>
+                <td>8</td>
+                <td style="text-align: right">
+                2
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                16
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-2_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/polyketon">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_SL_KETONE2.png?itok=Ec4662AZ"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/polyketon"
+                    >Polyketon
+                </a>
+                </td>
+                <td>8</td>
+                <td style="text-align: right">
+                3
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                24
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-3_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/caster-chip">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/MTL_ASC_CST1.png?itok=k0WV2geT"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/caster-chip"
+                    >Caster Chip
+                </a>
+                </td>
+                <td>4</td>
+                <td style="text-align: right">
+                6
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">
+                24
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <div
+                    class="item-cell"
+                    style="
+                    background-image: url(https://gamepress.gg/arknights/sites/arknights/files/2019-11/item-4_0.png);
+                    "
+                >
+                    <a href="https://gamepress.gg/arknights/item/lmd">
+                    <img
+                        src="https://gamepress.gg/arknights/sites/arknights/files/styles/50x50/public/game-images/items/GOLD.png?itok=Kim0GqpM"
+                    />
+                    </a>
+                </div>
+                </td>
+                <td>
+                <a href="https://gamepress.gg/arknights/item/lmd">LMD x20</a>
+                </td>
+                <td>∞</td>
+                <td style="text-align: right">
+                1
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+                <td style="text-align: right">-</td>
+            </tr>
+            <tr>
+                <th colspan="4" style="text-align: right">Coste Total:</th>
+                <td style="text-align: right">
+                2990
+                <img
+                    style="vertical-align: middle; width: 40px; height: 40px"
+                    src="https://gamepress.gg/arknights/sites/arknights/files/2021-02/DusksInk-2.png"
+                />
+                </td>
+            </tr>
+            </table>
+            </div>
+        </div>
+
+        <footer align="center">Todos los datos fueron extraidos de la pagina de Arknights en <a href="https://gamepress.gg/arknights" target="_blank">Gamepress</a></footer>
+    </div>
+  </body>
+</html>
